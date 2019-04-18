@@ -27,9 +27,9 @@ this returned a data.frame.
 Count error for h2 and corr value, also outputs significent level.
 }
 \examples{
-library(AAfun4)
-AAfun4::read.example(package = "AAfun4", setpath = TRUE)
-df<-AAfun4::read.file(file="fm.csv", header=TRUE)
+library(breedR)
+breedR::read.example(package = "breedR", setpath = TRUE)
+df<-breedR::read.file(file="fm.csv", header=TRUE)
 names(df)
 str(df)
 
