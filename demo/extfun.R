@@ -1,7 +1,7 @@
 ##
 ## demo file for bdR.pin et al. 
 ##
- #library(breedRPlus)
+
  library(breedR)
  
  data(globulus)
