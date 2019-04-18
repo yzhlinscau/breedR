@@ -13,6 +13,7 @@
 #' @param digit a number to control decimal point,5(default).
 #' @param vres  Index(T) to return results in vectors, F(default) for direct results.
 #' @export sig.level
+#' @export filterD1
 #' @export
 pin <- function(object,formula,signif,digit,vres){
   UseMethod("pin",object)
@@ -107,5 +108,15 @@ sig.level<-function(tvalue,se,...){
   }
   siglevel
 }
-
+# ----------------------------------------------------------------------------
+# ----------------------------------------------------------------------------
+# sig.level functions
+  filterD1<-function (x, ..., except = NULL) 
+{
+    res <- dplyr::filter(x, ...)
+    res <- droplevels(res, except)
+    if (nrow(res) == 0) 
+        WARN("The resultant data.frame has 0 rows. Try str() on the result.\n")
+    res
+}
 ##------------------------------
