@@ -21,7 +21,6 @@
 #' breedRPlus website:https://github.com/yzhlinscau/
 #' @examples 
 #' library(breedR)
-#' library(breedRPlus)
 #' library(tidyr)
 #' library(plyr)
 #' library(dplyr)
