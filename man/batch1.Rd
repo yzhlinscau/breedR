@@ -32,7 +32,6 @@ breedR batch analysis
 }
 \examples{
 library(breedR)
-library(breedRPlus)
 library(tidyr)
 
 data(douglas)
