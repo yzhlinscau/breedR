@@ -30,7 +30,6 @@ counts standard error(se) for heritability(h2)
 }
 \examples{
 library(breedR)
-library(breedRPlus)
 
 data(globulus)
 res.animal <- remlf90(fixed = phe_X ~ 1,
