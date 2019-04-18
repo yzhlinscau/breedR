@@ -22,7 +22,6 @@ Test trait's norm for BreedR object,similar to asreml.
 }
 \examples{
 library(breedR)
-library(breedRPlus)
 
 res.animal <- remlf90(fixed = phe_X ~ 1,
                       random = ~ gg,
