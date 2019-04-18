@@ -19,7 +19,6 @@ plot1 <- function(object,mulT) {
 #' breedRPlus website:https://github.com/yzhlinscau/
 #' @examples 
 #' library(breedR)
-#' library(breedRPlus)
 #' 
 #' res.animal <- remlf90(fixed = phe_X ~ 1,
 #'                       random = ~ gg,
