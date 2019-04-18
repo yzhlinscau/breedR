@@ -24,7 +24,6 @@ pin <- function(object,formula,signif,digit,vres){
 #' breedRPlus website:https://github.com/yzhlinscau/
 #' @examples 
 #' library(breedR)
-#' library(breedRPlus)
 #' 
 #' data(globulus)
 #' res.animal <- remlf90(fixed = phe_X ~ 1,
@@ -58,7 +57,7 @@ pin.remlf90 <- function(object,formula,signif=FALSE,digit=5,vres=FALSE) {
   
   transform<-formula
   #aa<-object$var[,"Estimated variances"]
-  aa1 <- breedRPlus::var(object)
+  aa1 <- breedR::var(object)
   aa <- aa1[, "component"]
   pframe <- as.list(aa)
   names(pframe) <- paste("x", seq(1, length(pframe)), sep = "")
@@ -72,7 +71,7 @@ pin.remlf90 <- function(object,formula,signif=FALSE,digit=5,vres=FALSE) {
   se<-round(se,digit)
   result<-data.frame(row.names=tname, Estimate=tvalue, SE=se)
   result1<-result
-  result1$sig.level<-breedRPlus::sig.level(tvalue,se)
+  result1$sig.level<-breedR::sig.level(tvalue,se)
   
   if(vres==FALSE){cat("\n")
     #options(digits=digit)
