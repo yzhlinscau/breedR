@@ -4,7 +4,7 @@
 #' \code{read.file} This function read file similar to asreml.read.table().
 #'
 #' @details
-#' Count error for h2 and corr value, also outputs significent level.
+#' This function read file similar to asreml.read.table().
 #' @aliases read.file
 #' @param file	 File name.
 #' @param header	 Whether file has header for varialbes, TRUE(default).
@@ -18,9 +18,9 @@
 #' AAfun website:https://github.com/yzhlinscau/AAfun
 #' @seealso See Also as \code{\link{read.example}}, \code{\link{fdata}}
 #' @examples
-#' library(AAfun4)
-#' AAfun4::read.example(package = "AAfun4", setpath = TRUE)
-#' df<-AAfun4::read.file(file="fm.csv", header=TRUE)
+#' library(breedR)
+#' breedR::read.example(package = "breedR", setpath = TRUE)
+#' df<-breedR::read.file(file="fm.csv", header=TRUE)
 #' names(df)
 #'
 #' @export
@@ -51,12 +51,12 @@ read.file<-function(file,header=TRUE,sep=',',dec='.',...){
 #' AAfun website:https://github.com/yzhlinscau/AAfun
 #' @seealso See Also as \code{\link{read.file}}, \code{\link{fdata}}
 #' @examples
-#' library(AAfun4)
+#' library(breedR)
 #' # read file list under a package
-#' AAfun4::read.example(package = "AAfun4")
+#' breedR::read.example(package = "breedR")
 #'
 #' # set working directory under a package
-#' AAfun4::read.example(package = "AAfun4", setpath = TRUE)
+#' breedR::read.example(package = "breedR", setpath = TRUE)
 #' getwd()
 #'
 #' @export
