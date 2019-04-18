@@ -19,13 +19,13 @@ this returned a path or file list.
 sets working directory under package.
 }
 \examples{
-library(AAfun4)
+library(breedR)
 # output file list under a package
-AAfun4::read.example(package = "AAfun4")
-#AAfun4::read.example(package = "readxl")
+breedR::read.example(package = "breedR")
+#breedR::read.example(package = "readxl")
 
 # set working directory under a package
-AAfun4::read.example(package = "AAfun4", setpath = TRUE)
+breedR::read.example(package = "breedR", setpath = TRUE)
 getwd()
 
 }
