@@ -43,7 +43,10 @@ var.remlf90 <- function (object,mulT=FALSE) {
   df<-as.data.frame(summary(object)$var)
   
   df$gamma<-df[,1]/df[nrow(df),1]
-  if(mulT==TRUE) df$gamma<-df[,1]
+  if(mulT==TRUE) {
+    df$gamma<-df[,1]
+    cat('When for multi-trait model, gammas are component values directly.\n')
+  }
   
   df$z.ratio<-df[,1]/df[,2]
   
