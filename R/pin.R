@@ -110,7 +110,7 @@ sig.level<-function(tvalue,se,...){
 }
 # ----------------------------------------------------------------------------
 # ----------------------------------------------------------------------------
-# sig.level functions
+# filter data functions
   filterD1<-function (x, ..., except = NULL) 
 {
     res <- dplyr::filter(x, ...)
