@@ -62,10 +62,8 @@ Using data `'douglas'` from package `'breedR'`:
 ``` r
 data(douglas)
 
-S3 <- subset(douglas, site == 's3' )
-S3a <- filter(S3, is.na(dad)) 
+S3a <- filterD1(douglas, site == 's3' )
 S3a <- transform(S3a, Mum = factor(mum))
-S3a <- droplevels(S3a)
 ```
 
 #### 01 single trait analysis
