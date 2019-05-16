@@ -52,7 +52,7 @@ read.file<-function(file,header=TRUE,sep=',',dec='.',...){
 #' @seealso See Also as \code{\link{read.file}}, \code{\link{fdata}}
 #' @examples
 #' library(breedR)
-#' # read file list under a package
+#' list all files  under a package
 #' breedR::read.example(package = "breedR")
 #'
 #' # set working directory under a package
@@ -78,9 +78,9 @@ read.example <- function(package,setpath = FALSE) {
 #' @details
 #' This function reads file list under one package, or sets working directory under package.
 #' @aliases fdata
-#' @param package	 package name.
-#' @param setpath	 Whether set working directory under package, FALSE(default).
-#' @return this returned a path or file list.
+#' @param data	 data frame.
+#' @param faS	 Variable positions to be as factors, NULL(default).
+#' @return this returned a new data frame after re-format.
 #' @author Yuanzhen Lin <yzhlinscau@@163.com>
 #' @references
 #' Yuanzhen Lin. R & ASReml-R Statistics. China Forestry Publishing House. 2016
@@ -97,7 +97,6 @@ fdata<-function(data,faS=NULL){
   data<-as.data.frame(data)
   if(is.null(faS)){
     aa<-names(data)
-
     sn<-grep('^[A-Z]{1}',aa)
   } else sn<-faS
 
