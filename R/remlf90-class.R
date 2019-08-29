@@ -303,6 +303,7 @@ remlf90 <- function(fixed,
                     breedR.bin = breedR.getOption("breedR.bin"),
                     progsf90.options = NULL,
                     weights = NULL,
+                    batch = FALSE,
                     debug = FALSE) {
   
   ## Assumptions:
@@ -440,12 +441,13 @@ remlf90 <- function(fixed,
     stop(paste('Some initial variances missing.\n',
                'Please specify either all or none.'))
   ## Issue a warning in the case of no specification
-  if (all(var.ini.checks, na.rm = TRUE)) {
+  if(batch==FALSE){
+      if (all(var.ini.checks, na.rm = TRUE)) {
     message(paste0('Using default initial variances given by ',
                   breedR.getOption('default.initial.variance'), '()\n',
                   'See ?breedR.getOption.\n'))
-  }
-  
+    }
+  }  
   
   # Build a list of parameters and information for each effect
   effects <- build.effects(mf, genetic, spatial, generic, var.ini)
