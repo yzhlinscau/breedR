@@ -72,13 +72,15 @@ install_progsf90 <- function(
   if (platform == 'linux') # further specify arch
     f.url <- file.path(f.url, paste0(arch, 'bit'))
   
+  ## close installing remf program from internet
   ## Retrieve each exec to dest
-  res <- sapply(execs, 
-                retrieve_bin, 
-                url = f.url,
-                dest = dest)
-  
-  return(res)
+  # res <- sapply(execs, 
+  #               retrieve_bin, 
+  #               url = f.url,
+  #               dest = dest)
+  #
+  #return(res)
+  invisible()
 }
 
 
