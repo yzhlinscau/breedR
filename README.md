@@ -20,7 +20,8 @@ site](http://famuvie.github.io/breedR/).
 # devtools::install_github('famuvie/breedR')  # for original version
 devtools::install_github('yzhlinscau/breedR')  # for edited version
 ```
-When updating the breedR package, it will re-install the reml90 program each time, and the process is slowly, so I have edited original codes with removing the program installation. After installing this edited version of breedR, users should download the program from https://share.weiyun.com/52C3rWH, and then unpack it under the folder of breedR in Rlibrary by renaming it (folder) with 'bin'. Reopen the R or Rstudio, breedR would do work.  ---- yuanzhen Lin(2019-Sep-03)
+
+`NOTES: When updating the breedR package, it will re-install the reml90 program each time, and the process is slowly, so I have edited original codes with removing the program installation. After installing this edited version of breedR, users should download the program from https://share.weiyun.com/52C3rWH, and then unpack it under the folder of breedR in Rlibrary by renaming it (folder) with 'bin'. Reopen the R or Rstudio, breedR would do work.  ---- yuanzhen Lin(2019-Sep-03)`
 
 #### Getting started
 Check the [breedR-wiki](https://github.com/famuvie/breedR/wiki)
